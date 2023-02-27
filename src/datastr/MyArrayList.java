@@ -61,5 +61,38 @@ public class MyArrayList {
 	public int howManyElements() {
 		return elementCounter;
 	}
+	
+	 
+	//1. create a definition of function increaseArray
+	private void increaseArray()
+	{
+	//2. calculate the new size of the new array
+		int newArraySize = (arraySize > 100)? (int)(arraySize *1.5) : arraySize * 2;
+		
+		/*
+		int newArraySize = arraySize *2;
+		if(arraySize>100) {
+			newArraySize = (int) (arraySize*1.5);
+		}*/
+		/*
+		int newArraySize;
+		if(arraySize > 100) {
+			 newArraySize = (int)(arraySize *1.5);
+		}
+		else
+		{
+			 newArraySize =arraySize * 2;
+		}*/
+	//3. create the new array
+		char[] newElements = new char[newArraySize];
+	//4. copy all elements from the old array to the new array
+		for(int i = 0; i < elementCounter;i++) {
+			newElements[i] = elements[i];
+		}
+	//5. change reference to the new array and it's size
+		elements = newElements;
+		arraySize = newArraySize;
+	}
+	
 
 }
