@@ -112,7 +112,42 @@ public class MyArrayList {
 	
 	//4. increase elementCounter
 	}
+	//TODO
+	//1. create a definition of function add
+	public void add(char newElement, int index) throws Exception
+	{
+	//2. verify the index - is it appropriate
+		if(index >= 0 && index <= elementCounter )
+		{
+			//3.5 verify if the index is equal with elementCounter 
+			if(index == elementCounter)
+			{
+				add(newElement);
+			}
+			else
+			{
+				//3. verify isFull
+				if(isFull())
+				{
+					increaseArray();
+				}
+				//4. copy from the end to the right side (using the index)
+				for(int i = elementCounter; i > index; i--) {
+					elements[i] = elements[i-1];
+				}
+				//5. add the new element in the specified index
+				elements[index] = newElement;
+				//6. increase elementCounter
+				elementCounter++;
+			}
+
+		}
+		else
+		{
+			throw (new Exception("Wrong index"));
+		}
 	
 	
+	}
 
 }
