@@ -20,5 +20,42 @@ public class MyArrayList {
 		
 		elements = new char[arraySize];
 	}
+	
+	//TODO create isFull and isEmpty functions
+	public boolean isEmpty()
+	{
+		//long if-else
+		/*if(elementCounter == 0) {
+			return true;
+		}
+		else
+		{
+			return false;
+		}*/
+		//for example
+		/*
+		return (arraySize< elementCounter) ? "var ievietot" : "nevar ievietot";
+		if (arraySize< elementCounter) {
+			return "var ievietot" ;
+		}
+		else
+		{
+			return "nevar ievietot";
+		}
+		*/
+		
+		
+		//short if-else
+		//kopējais   (if izteiksme)      ? ko darīt true    : ko darīt false gadījumā;
+		//return      (elementCounter == 0)? true             : false;
+		
+		return (elementCounter == 0);
+		
+	}
+	
+	public boolean isFull()
+	{
+		return (elementCounter==arraySize);
+	}
 
 }
