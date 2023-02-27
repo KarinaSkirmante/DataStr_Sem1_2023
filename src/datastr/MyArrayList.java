@@ -57,5 +57,9 @@ public class MyArrayList {
 	{
 		return (elementCounter==arraySize);
 	}
+	
+	public int howManyElements() {
+		return elementCounter;
+	}
 
 }
