@@ -212,6 +212,31 @@ public class MyArrayList {
 		
 	}
 	
+	//TODO retrieveNextNeigbour
+	
+	//TODO sort
+	
+	
+	
+	public void print() throws Exception
+	{
+		if(isEmpty()) {
+			throw (new Exception("Array is empty and it is not possible to print elements"));
+		}
+		else
+		{
+			for(int i = 0; i < elementCounter; i++) {
+				System.out.print(elements[i] + " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void makeEmpty() {
+		arraySize = DEFAULT_ARRAY_SIZE;
+		elementCounter = 0;
+		elements = new char[arraySize];
+	}
 	
 	
 }
