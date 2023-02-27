@@ -181,6 +181,23 @@ public class MyArrayList {
 		}
 	}
 	
+	public char retrieve(int index) throws Exception
+	{
+		if(isEmpty()) {
+			throw (new Exception("Array is empty and it is not possible to retrieve elements"));
+		}
+		else
+		{
+			if(index < 0 || index >= elementCounter) {
+				throw (new Exception("Wrong index"));
+			}
+			else
+			{
+				return elements[index];
+			}
+		}
+	}
+	
 	
 	
 }
