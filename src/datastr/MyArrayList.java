@@ -146,8 +146,41 @@ public class MyArrayList {
 		{
 			throw (new Exception("Wrong index"));
 		}
-	
-	
 	}
+	
+	
+	//1. create a definition of function add
+	public void remove(int index) throws Exception
+	{
+	//2. verify isEmpty
+		if(isEmpty()) {
+			throw (new Exception("Array is empty and it is not possible to remove elements"));
+		}
+		else
+		{
+	//3. verify the index - is it not appropriate
+			if(index < 0 || index >= elementCounter) {
+				throw (new Exception("Wrong index"));
+			}
+			else
+			{
+				//4. copy elements from index to end
+				for(int i = index; i < elementCounter-1; i++)
+				{
+					elements[i] = elements[i+1];
+				}
+				//5. initialize the last element with NUL symbol (int value is 0)
+				elements[elementCounter-1] = 0; //NUL symbol
 
+				//6. decrease elementCounter
+				elementCounter--;
+				
+				//for optimization
+				//elements[--elementCounter] = 0;
+			}
+		}
+	}
+	
+	
+	
 }
