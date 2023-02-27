@@ -94,5 +94,25 @@ public class MyArrayList {
 		arraySize = newArraySize;
 	}
 	
+	
+	//1. create a definition of function add
+	public void add(char newElement) {
+		//2. verify if the array is full
+		if(isFull()) {
+			//2.1. call an increaseArray() func.
+			increaseArray();
+		}
+	
+		//3. add the new element in the array
+		//the non-optimize option
+		elements[elementCounter] = newElement;
+		elementCounter++;
+		//the optimize option
+		//elements[elementCounter++] = newElement;
+	
+	//4. increase elementCounter
+	}
+	
+	
 
 }
