@@ -198,6 +198,20 @@ public class MyArrayList {
 		}
 	}
 	
+	public boolean search(char inputElement) {
+		
+		for(int i = 0; i < elementCounter; i++)
+		{
+			if(elements[i] == inputElement)//TODO if thre will be a reference type, need to change to equals()
+			{
+				return true;
+			}
+		}
+		
+		return false;
+		
+	}
+	
 	
 	
 }
