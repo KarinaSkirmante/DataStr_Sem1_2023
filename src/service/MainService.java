@@ -3,6 +3,7 @@ package service;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -37,7 +38,14 @@ public class MainService {
 			charList.add('d');//d
 			charList.print();//d
 			
+			System.out.println("---------------------------------");
+			MyArrayList fileList = getArrayElementsFromFile("resources/numbers.txt");
 			
+			fileList.print();
+			fileList.add('z');
+			fileList.remove(2);
+			fileList.print();
+			System.out.println(Arrays.toString(fileList.sort(SortingType.ASC)));
 			
 		}
 		catch (Exception e) {
