@@ -264,7 +264,7 @@ public class MyArrayList {
 			{
 				for(int i= 0; i < elementCounter; i++) {
 					for(int j = 0; j < elementCounter; j++) {
-						if(sortArray[i] > sortArray[j] )
+						if(sortArray[i] < sortArray[j] )
 						{   //  0   6
 							// [x] [a]
 							//temp = a
@@ -280,7 +280,7 @@ public class MyArrayList {
 			else if(type == SortingType.DESC) {
 				for(int i= 0; i < elementCounter; i++) {
 					for(int j = 0; j < elementCounter; j++) {
-						if(sortArray[i] < sortArray[j] )
+						if(sortArray[i] > sortArray[j] )
 						{  							
 							char temp = sortArray[i];
 							sortArray[i] = sortArray[j];
