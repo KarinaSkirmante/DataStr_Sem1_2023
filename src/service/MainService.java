@@ -31,7 +31,7 @@ public class MainService {
 			charList.add('a');//z f b d z a
 			charList.add('z');//z f b d z a z  increase() will be called
 			System.out.println(Arrays.toString(charList.retrieveNextNeigbours('z')));//f a
-			System.out.println(charList.sort(SortingType.ASC)); //a b d f z z z 
+			System.out.println(Arrays.toString(charList.sort(SortingType.ASC))); //a b d f z z z 
 			charList.print();//z f b d z a z
 			charList.makeEmpty();//empty array
 			//charList.print();//empty array
@@ -46,6 +46,16 @@ public class MainService {
 			fileList.remove(2);
 			fileList.print();
 			System.out.println(Arrays.toString(fileList.sort(SortingType.ASC)));
+			
+			MyArrayList<String> stringList = new MyArrayList<>();
+			stringList.add("Karina");
+			stringList.add("Janis");
+			stringList.add("Zanis", 0);
+			stringList.print();//Žanis, Karina, Jānis
+			System.out.println(Arrays.toString(stringList.sort(SortingType.DESC)));
+			stringList.remove(1);
+			stringList.print();//Žanis, Jānis
+			
 			
 		}
 		catch (Exception e) {
