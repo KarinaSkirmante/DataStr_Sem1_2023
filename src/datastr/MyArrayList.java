@@ -320,6 +320,7 @@ public class MyArrayList {
 		arraySize = DEFAULT_ARRAY_SIZE;
 		elementCounter = 0;
 		elements = new char[arraySize];
+		System.gc();
 	}
 	
 	
