@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 import datastr.MyArrayList;
 import datastr.SortingType;
+import model.Faculty;
+import model.Student;
 
 public class MainService {
 
@@ -56,7 +58,17 @@ public class MainService {
 			stringList.remove(1);
 			stringList.print();//Žanis, Jānis
 			
+			MyArrayList<Student> studentList = new MyArrayList<>();
+			studentList.add(new Student("Janis", "Berzins", Faculty.EPF, "123456-12345"));
+			studentList.add(new Student("Laine", "Jauka", Faculty.ITF, "123466-12345"));
+			studentList.add(new Student("Peteris", "Forsais", Faculty.ITF, "133466-12345"));
+			studentList.print();
+			studentList.add(new Student("Gatis", "Nejaukais", Faculty.ITF, "133566-12345"), 0);
+			studentList.print();
+			studentList.remove(1);
+			studentList.print();	
 			
+			System.out.println(Arrays.toString(studentList.sort(SortingType.DESC)));
 		}
 		catch (Exception e) {
 			System.out.println(e);
