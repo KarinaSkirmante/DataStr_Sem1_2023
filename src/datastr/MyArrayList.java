@@ -213,6 +213,38 @@ public class MyArrayList {
 	}
 	
 	//TODO retrieveNextNeigbour
+	public char[] retrieveNextNeigbours(char inputElement) throws Exception {
+		//true case
+		if(search(inputElement)) {
+			int howManySearchedElements = 0;
+			for(int i = 0; i < elementCounter; i++)
+			{
+				if(elements[i] == inputElement)
+				{
+					howManySearchedElements++;
+				}
+			}
+			if(elements[elementCounter-1]==inputElement) {
+				howManySearchedElements--;
+			}
+			
+			char[] nextNeigbours = new char[howManySearchedElements];
+			int indexForNeigbors = 0;
+			for(int i = 0; i < elementCounter-1;i++) {
+				if(elements[i] == inputElement) {
+					nextNeigbours[indexForNeigbors] = elements[i+1];
+					indexForNeigbors++;
+				}
+			}
+			return nextNeigbours;
+			
+		}
+		//false case
+		else{
+			throw (new Exception("Input element is not found in the array"));
+		}
+	}
+	
 	
 	//TODO sort
 	
