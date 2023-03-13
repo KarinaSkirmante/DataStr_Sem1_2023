@@ -219,11 +219,12 @@ public class MyArrayList<T> {
 			for (int i = 0; i < elementCounter; i++) {
 				for (int j = 0; j < elementCounter; j++) {
 					// if(sortArray[i] < sortArray[j] )
-					System.out.println(sortArray[i]);
-					System.out.println(sortArray[j]);
-					System.out.println(((Comparable)sortArray[i]).compareTo(sortArray[j]));
-					
-					if (((Comparable)sortArray[i]).compareTo(sortArray[j]) == sortVariable) { // 0 6
+					//System.out.println(sortArray[i]);
+					//System.out.println(sortArray[j]);
+					//System.out.println(((Comparable)sortArray[i]).compareTo(sortArray[j]));
+					//TODO create this for descending
+					//ascending
+					if (((Comparable)sortArray[i]).compareTo(sortArray[j]) < 0) { // 0 6
 						T temp = sortArray[i];
 						sortArray[i] = sortArray[j];
 						sortArray[j] = temp;
